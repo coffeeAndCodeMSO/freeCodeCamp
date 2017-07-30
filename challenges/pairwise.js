@@ -1,9 +1,6 @@
 // Solution to problem here:
 //  https://www.freecodecamp.org/challenges/pairwise
 
-var mocha = require('mocha')
-var expect = require('expect.js')
-
 function pairwise(arr, arg) {
   var indArr = [];
   if (arr.length < 2) {
@@ -38,7 +35,16 @@ function pairwise(arr, arg) {
     }
   });
 
-  // Initial failed attempt, does not account for requirement that an index be used only once
+  // add the indexes of the pairs that added to the value
+  var idxSum = indArr.reduce(function(value, sum){ return sum + value });
+  console.log(idxSum);
+  return idxSum;
+}
+
+module.exports.pairwise = pairwise;
+
+
+// Initial failed attempt, does not account for requirement that an index be used only once
   //
   // arrWind.forEach(function(value, index, array) {
   //   for(var j = index + 1; j < arrWind.length; j++ ) {
@@ -51,38 +57,3 @@ function pairwise(arr, arg) {
   //     }
   //   }
   // });
-
-  // add the indexes of the pairs that added to the value
-  var idxSum = indArr.reduce(function(value, sum){ return sum + value });
-  console.log(idxSum);
-  return idxSum;
-}
-
-
-describe("smoke test", function() {
-
-  it("should return 0 for an empty list", function() {
-    expect(pairwise([], 1)).to.equal(0)
-  })
-
-  it("should return 0 for list with 1 element", function() {
-    expect(pairwise([100], 8)).to.equal(0)
-  })
-
-  it("should return the right", function() {
-    expect(pairwise([1,4,2,3,0,5], 7)).to.equal(11);
-  })
-
-  it("Given 4 as arg should return 1", function() {
-    expect(pairwise([1,3,2,4], 4)).to.equal(1);
-  })
-
-  it("Given 2 as arg should return 1", function() {
-    expect(pairwise([1,1,1], 2)).to.equal(1);
-  })
-
-  it("Pairwise sum", function() {
-    expect(pairwise([0,0,0,0,1,1], 1)).to.equal(10);
-  })
-
-});
