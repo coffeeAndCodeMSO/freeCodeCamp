@@ -27,3 +27,7 @@ $ mocha pairwise.js
 - Reach on #freecodecamp if its not working.
 
 - Do more exercises in this style, add your solutions to this folder.
+
+## run your own
+
+Haven't done it yet? add in a new solution start with the <challenge name>-next.js file change the reference in the test for the suite and start at red
