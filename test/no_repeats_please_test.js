@@ -1,80 +1,66 @@
+/*
+Tests for no-repeats-please challenge
+URL: https://www.freecodecamp.org/challenges/no-repeats-please
+*/
+
 var testFile = require('../challenges/no-repeats.js');
 var mocha = require('mocha');
 var expect = require('expect.js');
 
 
-var runTest = function(spec) {
-    it(spec.description, function() {
-        expect(spec.input).to.equal(spec.result);
-    });
-};
+describe('Official test suite straight from Free Code Camp', function() {
 
-describe('repeats test suite', function() {
-    runTest({
-        description: 'repeats("aab") should return a number.',
-        input: typeof testFile.repeats(''),
-        result: 'number'
+    it( 'repeats("aab") should return a number.', function() {
+        rtn = testFile.permAlone('abab')
+        expect(rtn).to.be.a('number');
     });
 
-    runTest({
+    runBasicTest = function(testDef) {
+        it(testDef.description, function() {
+            expect(testFile.permAlone(testDef.input)).to.equal(testDef.expected_result);
+        });
+    };
+
+    BasicTestDefs = [{
         description: 'repeats("aab") should return 2.',
-        input: testFile.repeats('aab'),
-        result: 2
-    });
-
-    runTest({
+        input: 'aab',
+        expected_result: 2
+    },{
         description: 'repeats("aaa") should return 0.',
-        input: testFile.repeats('aaa'),
-        result: 0
-    });
-
-    //permAlone("aabb") should return 8.
-    runTest({
+        input: 'aaa',
+        expected_result: 0
+    },{
         description: 'repeats("aabb") should return 8.',
-        input: testFile.repeats('aabb'),
-        result: 8
-    });
-
-    //permAlone("abcdefa") should return 3600.
-    runTest({
+        input: 'aabb',
+        expected_result: 8
+    },{
         description: 'repeats("abcdefa") should return 3600.',
-        input: testFile.repeats('abcdefa'),
-        result: 3600
-    });
-
-    //permAlone("abfdefa") should return 2640.
-    runTest({
+        input: 'abcdefa',
+        expected_result: 3600
+    },{
         description: 'repeats("abfdefa") should return 2640.',
-        input: testFile.repeats('abfdefa'),
-        result: 2640
-    });
-
-    //permAlone("zzzzzzzz") should return 0.
-    runTest({
+        input: 'abfdefa',
+        expected_result: 2640
+    },{
         description: 'repeats("zzzzzzzz") should return 0.',
-        input: testFile.repeats('zzzzzzzz'),
-        result: 0
-    });
-
-    //permAlone("a") should return 1.
-    runTest({
+        input: 'zzzzzzzz',
+        expected_result: 0
+    },{
         description: 'repeats("a") should return 1.',
-        input: testFile.repeats('a'),
-        result: 1
-    });
-
-    //permAlone("aaab") should return 0.
-    runTest({
+        input: 'a',
+        expected_result: 1
+    },{
         description: 'repeats("aaab") should return 0.',
-        input: testFile.repeats('aaab'),
-        result: 0
-    });
-
-    //permAlone("aaabb") should return 12.
-    runTest({
+        input: 'aaab',
+        expected_result: 0
+    },{
         description: 'repeats("aaabb") should return 12.',
-        input: testFile.repeats('aaabb'),
-        result: 12
+        input: 'aaabb',
+        expected_result: 12
+    }]
+
+    BasicTestDefs.forEach(function(testDef) {
+      runBasicTest(testDef);
     });
 
 })
