@@ -16,45 +16,37 @@ describe('Official test suite straight from Free Code Camp', function() {
     });
 
     runBasicTest = function(testDef) {
-        it(testDef.description, function() {
+        description = "permAlone(" + testDef.input + ") should equal: " + testDef.expected_result
+        it(description, function() {
             expect(testFile.permAlone(testDef.input)).to.equal(testDef.expected_result);
         });
     };
 
     BasicTestDefs = [{
-        description: 'repeats("aab") should return 2.',
         input: 'aab',
         expected_result: 2
     },{
-        description: 'repeats("aaa") should return 0.',
         input: 'aaa',
         expected_result: 0
     },{
-        description: 'repeats("aabb") should return 8.',
         input: 'aabb',
         expected_result: 8
     },{
-        description: 'repeats("abcdefa") should return 3600.',
         input: 'abcdefa',
         expected_result: 3600
     },{
-        description: 'repeats("abfdefa") should return 2640.',
         input: 'abfdefa',
         expected_result: 2640
     },{
-        description: 'repeats("zzzzzzzz") should return 0.',
         input: 'zzzzzzzz',
         expected_result: 0
     },{
-        description: 'repeats("a") should return 1.',
         input: 'a',
         expected_result: 1
     },{
-        description: 'repeats("aaab") should return 0.',
         input: 'aaab',
         expected_result: 0
     },{
-        description: 'repeats("aaabb") should return 12.',
         input: 'aaabb',
         expected_result: 12
     }]
