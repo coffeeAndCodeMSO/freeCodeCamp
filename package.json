@@ -1,16 +1,30 @@
 {
-    "name": "freeCodeCampMissoula",
-    "version": "0.0.1",
-    "description": "Free code camp challenges we complete at Coffee & Code Missoula.",
-    "repository": "https://github.com/paularmstrong/node-templates.git",
-    "homepage": "http://paularmstrong.github.com/node-templates/",
-    "author": "Edward Weymouth",
-    "dependencies": {
-        "expect.js": "^0.3.1",
-        "mocha": "^3.4.2"
-    },
-    "main": "index",
-    "engines": {
-        "node": ">= 0.4.1"
-    }
+  "name": "freecodecampmissoula",
+  "version": "0.0.1",
+  "description": "Free code camp challenges we complete at Coffee & Code Missoula.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paularmstrong/node-templates.git"
+  },
+  "homepage": "http://paularmstrong.github.com/node-templates/",
+  "author": "Edward Weymouth",
+  "dependencies": {},
+  "main": "index",
+  "engines": {
+    "node": ">= 0.4.1"
+  },
+  "bugs": {
+    "url": "https://github.com/paularmstrong/node-templates/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.5.0"
+  }
 }
