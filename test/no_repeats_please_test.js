@@ -12,7 +12,7 @@ var runTest = function(spec) {
 describe('repeats test suite', function() {
     runTest({
         description: 'repeats("aab") should return a number.',
-        input: typeof testFile.repeats(1),
+        input: typeof testFile.repeats(''),
         result: 'number'
     });
 
