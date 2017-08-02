@@ -1,6 +1,6 @@
 function permAlone(str) {
         var regex = /(.)\1+/g;
-	      var arrayStr = str.split(''); 
+	      var arrayStr = str.split('');
       	function perm(array) {
       	        var res = [];
 
@@ -26,6 +26,4 @@ function permAlone(str) {
         return filtered.length;
 }
 
-permAlone("aab");
-
-module.exports.repeats = permAlone;
+module.exports.permAlone = permAlone;
