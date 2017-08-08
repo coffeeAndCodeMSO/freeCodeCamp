@@ -40,20 +40,20 @@ describe('Official test suite straight from Free Code Camp', function() {
   });
 
   it('bob.getFirstName() should return "Bob".', function() {
-    expect(bob.getFirstName).to.eql("Bob");
+    expect(bob.getFirstName()).to.eql("Bob");
   });
 
   it('bob.getLastName() should return "Ross".', function() {
-    expect(bob.getLastName).to.eql("Ross");
+    expect(bob.getLastName()).to.eql("Ross");
   });
 
   it('bob.getFullName() should return "Bob Ross".', function() {
-    expect(bob.getFullName).to.eql("Bob Ross");
+    expect(bob.getFullName()).to.eql("Bob Ross");
   });
 
   it('bob.getFullName() should return "Haskell Ross" after bob.setFirstName("Haskell").', function() {
     bob.setFirstName("Haskell")
-    expect(bob.getFullName).to.eql("Haskell Ross");
+    expect(bob.getFullName()).to.eql("Haskell Ross");
   });
 
 
@@ -63,22 +63,22 @@ describe('Official test suite straight from Free Code Camp', function() {
     // beforeEach, the setFirstName call is repeated in here    bob.setFirstName("Haskell")
     bob.setFirstName("Haskell")
     bob.setLastName("Curry")
-    expect(bob.getFullName).to.eql("Haskell Curry");
+    expect(bob.getFullName()).to.eql("Haskell Curry");
   });
 
   it('bob.getFullName() should return "Haskell Curry" after bob.setFullName("Haskell Curry").', function() {
     bob.setFullName("Haskell Curry")
-    expect(bob.getFullName).to.eql("Haskell Curry");
+    expect(bob.getFullName()).to.eql("Haskell Curry");
   });
 
   it('bob.getFirstName() should return "Haskell" after bob.setFullName("Haskell Curry").', function() {
     bob.setFullName("Haskell Curry")
-    expect(bob.getFirstName).to.eql("Haskell");
+    expect(bob.getFirstName()).to.eql("Haskell");
   });
 
   it('bob.getLastName() should return "Curry" after bob.setFullName("Haskell Curry").', function() {
     bob.setFullName("Haskell Curry")
-    expect(bob.getLastName).to.eql("Curry");
+    expect(bob.getLastName()).to.eql("Curry");
   });
 
 });
