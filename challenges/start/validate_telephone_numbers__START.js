@@ -10,11 +10,9 @@ See Instructions below
 
 function telephoneCheck(str) {
   // Good luck!
-  var test  =  /^1?\s?(\(\d{3}\)|\d{3})[\s-]?\d{3}[\s-]\d{4}$|^\d{10}$+/;
   return test.test(str);
 }
 
-telephoneCheck("555-555-5555");
 
 module.exports.telephoneCheck = telephoneCheck;
 
