@@ -1,5 +1,5 @@
 /*
-Tests for free code camp Make A Person challenge
+Tests for free code camp Exact Change 
 https://www.freecodecamp.org/challenges/exact-change
 */
 
